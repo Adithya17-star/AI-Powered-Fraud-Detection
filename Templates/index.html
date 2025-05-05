@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+
+{% block title %}AI Fraud Detection System - Home{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- Hero Section -->
+    <div class="row my-5 py-5">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+            <h1 class="display-4 fw-bold">AI-Powered Fraud Detection</h1>
+            <p class="lead my-4">
+                Protect your business with cutting-edge machine learning technology that identifies fraudulent transactions in real-time.
+            </p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                {% if current_user.is_authenticated %}
+                <a href="{{ url_for('dashboard') }}" class="btn btn-primary btn-lg px-4 me-md-2">
+                    <i class="fas fa-tachometer-alt me-2"></i>Go to Dashboard
+                </a>
+                {% else %}
+                <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg px-4 me-md-2">
+                    <i class="fas fa-sign-in-alt me-2"></i>Login
+                </a>
+                <a href="{{ url_for('register') }}" class="btn btn-outline-secondary btn-lg px-4">
+                    <i class="fas fa-user-plus me-2"></i>Register
+                </a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-lg-6 d-flex align-items-center justify-content-center">
+            <svg width="500" height="300" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="gradBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#4e54c8;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#8f94fb;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <!-- Background Grid -->
+                <g stroke="#6c757d" stroke-width="0.5" opacity="0.1">
+                    {% for x in range(0, 500, 20) %}
+                    <line x1="{{ x }}" y1="0" x2="{{ x }}" y2="300" />
+                    {% endfor %}
+                    {% for y in range(0, 300, 20) %}
+                    <line x1="0" y1="{{ y }}" x2="500" y2="{{ y }}" />
+                    {% endfor %}
+                </g>
+                <!-- Card -->
+                <rect x="100" y="80" width="300" height="180" rx="10" fill="#343a40" />
+                <rect x="120" y="120" width="260" height="30" rx="5" fill="#495057" />
+                <rect x="120" y="170" width="70" height="70" rx="5" fill="#495057" />
+                <rect x="210" y="170" width="170" height="25" rx="5" fill="#495057" />
+                <rect x="210" y="205" width="80" height="35" rx="5" fill="#495057" />
+                <rect x="300" y="205" width="80" height="35" rx="5" fill="#495057" />
+                <!-- Alert Notification -->
+                <circle cx="130" cy="60" r="40" fill="url(#gradBlue)" />
+                <path d="M130 30 L130 70 M115 55 L145 55" stroke="white" stroke-width="5" />
+                <!-- Lines connecting elements -->
+                <path d="M120 60 C100 100, 80 120, 100 150" stroke="#6c757d" stroke-width="2" stroke-dasharray="5,5" fill="none" />
+                <path d="M170 60 C190 80, 220 90, 260 120" stroke="#6c757d" stroke-width="2" stroke-dasharray="5,5" fill="none" />
+                <!-- ML Brain -->
+                <circle cx="350" cy="60" r="35" fill="none" stroke="#6c757d" stroke-width="3" />
+                <path d="M325 60 C335 40, 365 40, 375 60 C385 75, 375 95, 350 95 C325 95, 315 75, 325 60" fill="none" stroke="#6c757d" stroke-width="2" />
+                <path d="M340 50 L340 65 M360 50 L360 65" stroke="#6c757d" stroke-width="2" />
+                <path d="M335 75 C345 85, 355 85, 365 75" stroke="#6c757d" stroke-width="2" />
+                <path d="M350 60 C370 80, 390 90, 400 150" stroke="#6c757d" stroke-width="2" stroke-dasharray="5,5" fill="none" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="row g-4 py-5">
+        <h2 class="display-6 fw-bold text-center mb-4">Key Features</h2>
+        
+        <div class="col-md-4">
+            <div class="card h-100 bg-dark">
+                <div class="card-body text-center">
+                    <div class="feature-icon d-inline-flex align-items-center justify-content-center bg-primary bg-gradient text-white fs-2 mb-3 rounded-circle" style="width: 80px; height: 80px;">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="card-title">Machine Learning</h3>
+                    <p class="card-text">Advanced ML algorithms continuously learn from your transaction patterns to detect anomalies and identify fraud.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card h-100 bg-dark">
+                <div class="card-body text-center">
+                    <div class="feature-icon d-inline-flex align-items-center justify-content-center bg-primary bg-gradient text-white fs-2 mb-3 rounded-circle" style="width: 80px; height: 80px;">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="card-title">Real-time Analytics</h3>
+                    <p class="card-text">Monitor transactions in real-time with an intuitive dashboard that highlights suspicious activities.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card h-100 bg-dark">
+                <div class="card-body text-center">
+                    <div class="feature-icon d-inline-flex align-items-center justify-content-center bg-primary bg-gradient text-white fs-2 mb-3 rounded-circle" style="width: 80px; height: 80px;">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="card-title">Detailed Reports</h3>
+                    <p class="card-text">Generate comprehensive reports to understand fraud patterns and make data-driven decisions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How It Works Section -->
+    <div class="row py-5">
+        <h2 class="display-6 fw-bold text-center mb-5">How It Works</h2>
+        
+        <div class="col-12">
+            <div class="timeline position-relative">
+                <div class="row g-4">
+                    <div class="col-md-3">
+                        <div class="card bg-dark">
+                            <div class="card-body text-center">
+                                <div class="timeline-icon bg-primary text-white rounded-circle mb-3 d-inline-flex align-items-center justify-content-center fs-4" style="width: 50px; height: 50px;">
+                                    <i class="fas fa-upload"></i>
+                                </div>
+                                <h4 class="card-title">1. Upload</h4>
+                                <p class="card-text">Upload your transaction data in CSV format to our secure platform.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3">
+                        <div class="card bg-dark">
+                            <div class="card-body text-center">
+                                <div class="timeline-icon bg-primary text-white rounded-circle mb-3 d-inline-flex align-items-center justify-content-center fs-4" style="width: 50px; height: 50px;">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <h4 class="card-title">2. Process</h4>
+                                <p class="card-text">Our AI analyzes transaction patterns using advanced machine learning models.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3">
+                        <div class="card bg-dark">
+                            <div class="card-body text-center">
+                                <div class="timeline-icon bg-primary text-white rounded-circle mb-3 d-inline-flex align-items-center justify-content-center fs-4" style="width: 50px; height: 50px;">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <h4 class="card-title">3. Detect</h4>
+                                <p class="card-text">Suspicious transactions are identified and flagged for review.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3">
+                        <div class="card bg-dark">
+                            <div class="card-body text-center">
+                                <div class="timeline-icon bg-primary text-white rounded-circle mb-3 d-inline-flex align-items-center justify-content-center fs-4" style="width: 50px; height: 50px;">
+                                    <i class="fas fa-chart-pie"></i>
+                                </div>
+                                <h4 class="card-title">4. Report</h4>
+                                <p class="card-text">Get detailed reports and visualizations of fraud patterns and insights.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="row py-5 my-5 bg-dark rounded">
+        <div class="col-md-8 mx-auto text-center">
+            <h2 class="display-5 fw-bold">Ready to protect your business?</h2>
+            <p class="lead my-4">
+                Start detecting fraudulent transactions today with our AI-powered platform.
+            </p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                {% if current_user.is_authenticated %}
+                <a href="{{ url_for('dashboard') }}" class="btn btn-primary btn-lg px-4">
+                    <i class="fas fa-tachometer-alt me-2"></i>Go to Dashboard
+                </a>
+                {% else %}
+                <a href="{{ url_for('register') }}" class="btn btn-primary btn-lg px-4">
+                    <i class="fas fa-user-plus me-2"></i>Get Started
+                </a>
+                <a href="{{ url_for('login') }}" class="btn btn-outline-secondary btn-lg px-4">
+                    <i class="fas fa-sign-in-alt me-2"></i>Login
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
