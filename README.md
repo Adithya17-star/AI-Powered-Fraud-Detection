@@ -1,6 +1,5 @@
 # AI-Enabled Fraud Detection System
 
-![Fraud Detection]("assets/fraud-detection.jpg")
 
 An advanced machine learning-powered system for detecting fraudulent transactions with interactive visualizations and comprehensive reporting.
 
