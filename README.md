@@ -1,6 +1,6 @@
 # AI-Enabled Fraud Detection System
 
-![Fraud Detection](https://github.com/Adithya17-star/AI-Enabled-Fraud-Detection/raw/main/generated-icon.png)
+![Fraud Detection]("C:\Users\adith\.vscode\Portfolio\fraud-detection.jpg")
 
 An advanced machine learning-powered system for detecting fraudulent transactions with interactive visualizations and comprehensive reporting.
 
