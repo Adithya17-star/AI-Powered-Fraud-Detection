@@ -1,6 +1,6 @@
 # AI-Enabled Fraud Detection System
 
-![Fraud Detection]("C:\Users\adith\.vscode\Portfolio\fraud-detection.jpg")
+![Fraud Detection]("assets/fraud-detection.jpg")
 
 An advanced machine learning-powered system for detecting fraudulent transactions with interactive visualizations and comprehensive reporting.
 
