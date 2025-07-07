@@ -1,8 +1,7 @@
 # AI-Enabled Fraud Detection System
 
 
-An advanced machine learning-powered system for detecting fraudulent transactions with interactive visualizations and comprehensive reporting.
-
+An advanced machine learning-powered system for detecting fraudulent financial transactions. Features interactive dashboards, real-time analysis, and secure user authentication.
 ## 🔍 Features
 
 - **Machine Learning Detection**: Utilizes Random Forest and Isolation Forest algorithms to identify potentially fraudulent transactions
