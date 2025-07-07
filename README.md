@@ -4,12 +4,12 @@
 An advanced machine learning-powered system for detecting fraudulent financial transactions. Features interactive dashboards, real-time analysis, and secure user authentication.
 ## 🔍 Features
 
-- **Machine Learning Detection**: Utilizes Random Forest and Isolation Forest algorithms to identify potentially fraudulent transactions
+- **Machine Learning Detection**: Detects suspicious activity using Random Forest and Isolation Forest algorithms
 - **Interactive Dashboard**: Real-time statistics and visualization of transaction data
-- **Upload & Analysis**: Easy CSV upload and analysis with custom detection sensitivity
+- **CSV Upload & Analysis**: Upload transaction data and analyze with custom sensitivity
 - **Comprehensive Reports**: Generate detailed fraud analysis reports with visualizations
-- **Transaction Details**: In-depth analysis of individual transactions with risk factors
-- **User Authentication**: Secure login and registration system
+- **Transaction Deep Dive**: View risk factors and breakdowns for each transaction
+- **User Authentication**: Secure registration, login, and session management
 
 ## 🛠️ Technology Stack
 
