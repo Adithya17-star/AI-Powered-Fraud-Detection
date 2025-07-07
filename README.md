@@ -4,6 +4,7 @@
 An advanced machine learning-powered system for detecting fraudulent financial transactions. Features interactive dashboards, real-time analysis, and secure user authentication.
 
 🌐 [Live Demo](https://adithya17-star.github.io/AI-Powered-Fraud-Detection/)
+
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![Flask](https://img.shields.io/badge/Framework-Flask-green)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
