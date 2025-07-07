@@ -134,7 +134,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 👥 Authors
 
-- **Adithya** - *Initial work* - [Adithya17-star](https://github.com/Adithya17-star)
+- **Adithya Kakarla** - *Initial work* - [Adithya17-star](https://github.com/Adithya17-star)
 
 ## 🙏 Acknowledgements
 
